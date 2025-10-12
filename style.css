@@ -42,3 +42,50 @@ nav a.current {
   padding-bottom: 0.1em;                      
   font-weight: 600;                             
 }
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr ;
+
+  gap: 1em;
+  max-width: 100ch;
+}
+
+form label{
+  display: grid;
+  grid-template-columns: subgrid;  /* inherit the two columns from the parent */
+  grid-column: 1 / -1;             /* this label occupies the full row */
+  align-items: center;
+}
+
+form button { grid-column: 1 / -1; width: 100%; }
+
+.projects {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3; /* each article spans 3 implicit rows of the parent grid */
+  gap: 1em;         /* spacing between heading, image, and paragraph */
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 400%;          /* 4× body text size for strong contrast */
+  line-height: 1.1;         /* tighter leading for headings */
+  text-wrap: balance;       /* nicer line breaks */
+  margin-block: 0.2em 0.6em;
+}
+
