@@ -174,3 +174,36 @@ button,
 select {
   font: inherit;
 }
+
+#profile-stats {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 0.75rem;
+  background-color: oklch(98% 2% 250);
+
+ 
+  max-width: 100ch;         
+  margin-inline: auto;              
+  box-sizing: border-box;           
+}
+
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.5rem 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+#profile-stats dt {
+  font-weight: 600;
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.1em;
+}

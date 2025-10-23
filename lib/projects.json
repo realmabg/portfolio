@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Impact of Arena Backgrounds on NCAA Basketball Shooting Performance",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzing multi-season NCAA Division I shot-chart data (2021–2025) to study how arena backgrounds (wall vs. stands) affect shooting. Collaboration with Greg Appelbaum and OptiLab."
+    },
+    {
+        "title": "NBA Championship Predictor",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed machine-learning models using past NBA seasons and statistics; applied feature engineering and hyperparameter optimization to predict championship winners."
+    },
+    {
+        "title": "League of Legends Vision Score Analysis",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Performed missingness analysis and hypothesis testing on esports data; trained a Random Forest (via Grid Search) to predict team vision scores."
+    },
+    {
+        "title": "San Diego Bus Routes",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built a Python/pandas tool to compute shortest routes between bus stops across San Diego using graph algorithms."
+    },
+    {
+        "title": "Image Processing App",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Implemented image transformations (grayscale, brightness, chroma keying) and classified day vs. night images using KNN in Python."
+    },
+    {
+    "title": "GroceryDB Price–Protein Visualization",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Visualization of price-per-calorie vs. protein bins across major grocery stores."
+  },
+  {
+    "title": "Portfolio Website (This Site)",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "HTML,CSS, JS, and GitHub API integration."
+  },
+  {
+    "title": "Logistic Regression Sentiment Classifier",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built and evaluated a logistic regression text classifier; ROC/AUC and calibration checks."
+  },
+  {
+    "title": "UPDRS Clinical Modeling (Capstone Mini)",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Explored relationships between UPDRS metrics and post-diagnosis outcomes; regression + visualization."
+  },
+  {
+    "title": "TBD",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "TBD"
+  },
+  {
+    "title": "TBD",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "TBD"
+  },
+  {
+    "title": "TBD",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "TBD"
+  },
+  {
+    "title": "TBD",
+    "year": 2022,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "TBD"
+  }
+]
