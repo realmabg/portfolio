@@ -282,3 +282,226 @@ path {
     opacity: 0.5;
   }
 }
+#stats {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid oklch(80% 0.03 200);
+  border-radius: 12px;
+  background: oklch(98% 0.02 250);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+#stats dl.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.35rem 0.5rem;
+  align-items: start;
+  margin: 0;
+}
+
+#stats dl.stats dt {
+  grid-row: 1;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: oklch(55% 0.03 250);
+  margin: 0;
+}
+
+#stats dl.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw + .2rem, 2.1rem);
+  line-height: 1.1;
+  color: oklch(18% 0 250);
+  font-variant-numeric: tabular-nums;
+}
+
+#stats dl.stats *,
+#stats dl.stats code {
+  overflow-wrap: anywhere;
+}
+
+#stats dl.stats code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em;
+  background: oklch(96% 0.02 250);
+  padding: .05rem .25rem;
+  border-radius: .35rem;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.gridlines line {
+  stroke: lightgray;
+  stroke-opacity: 0.5;
+}
+
+.gridlines path {
+  display: none;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+dl.info dt {
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.7;
+}
+dl.info dd {
+  margin: 0;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: canvas;
+  color: canvastext;
+  padding: 0.75rem 1rem;
+  border: 1px solid oklch(80% 0.03 200);
+  border-radius: 0.5rem;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+dl.info dt {
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.7;
+}
+dl.info dd {
+  margin: 0;
+}
+
+.tooltip {
+  position: fixed;         
+  top: 1em;
+  left: 1em;
+
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+
+  background: rgba(255, 255, 255, 0.9);      
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.08);          
+  border: 1px solid oklch(85% 0.02 250 / .6);
+
+  backdrop-filter: saturate(120%) blur(4px);  
+  -webkit-backdrop-filter: saturate(120%) blur(4px);
+
+  color: canvastext;
+  max-width: 32rem;
+  z-index: 1000;
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes marching-ants {
+  to { stroke-dashoffset: -8; }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#chart {
+  position: relative;      
+  user-select: none;       
+  overscroll-behavior: contain; 
+}
+
+#chart svg {
+  display: block;
+  touch-action: none;  }    
+
+/* #commit-tooltip.tooltip {
+  position: fixed;         
+  pointer-events: none;
+} */
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+#language-breakdown {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+  background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  max-width: 420px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  color: #1e293b;
+  transition: box-shadow 0.2s ease;
+}
+
+#language-breakdown:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#language-breakdown dt {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#language-breakdown dd {
+  margin: 0;
+  text-align: right;
+  color: #475569;
+}
+
+#selection-count {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  letter-spacing: 0.2px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+#language-breakdown dt::before {
+  content: "• ";
+  color: #3b82f6; 
+}
