@@ -54,10 +54,10 @@
     "description": "Explored relationships between UPDRS metrics and post-diagnosis outcomes; regression + visualization."
   },
   {
-    "title": "TBD",
-    "year": 2024,
+    "title": "Bikewatching: Bluebikes Traffic in Boston",
+    "year": 2025,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "TBD"
+    "description": "Interactive Mapbox + D3 app visualizing station traffic and time-of-day patterns for Bluebikes in Boston and Cambridge."
   },
   {
     "title": "TBD",
