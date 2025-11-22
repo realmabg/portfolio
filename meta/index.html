@@ -9,40 +9,60 @@
   <script type="module" src="./main.js"></script>
 </head>
 <body>
-    <nav><ul></ul></nav>
+  <nav><ul></ul></nav>
+
   <header>
     <h1>Codebase Meta-Analysis</h1>
     <p>This page will visualize various statistics about our codebase — such as file counts, line lengths, and keyword frequencies.</p>
     
-    
-    
-<div id="stats"></div>    
-</header>
-<h2>Commits by time of day</h2>
-<div id="chart"></div>
-<dl id="commit-tooltip" class="info tooltip" hidden>
-  <dt>Commit</dt>
-  <dd>
-    <a href="" id="commit-link" target="_blank"></a>
-  </dd>
+    <div id="time-filter">
+      <label>
+        Show commits until:
+        <input id="commit-progress" type="range" min="0" max="100" value="100" />
+        <time id="commit-time">Loading...</time>
+      </label>
+    </div>
 
-  <dt>Date</dt>
-  <dd id="commit-date"></dd>
+    <div id="stats"></div>
+  </header>
 
-  <!-- Add: Time, author, lines edited -->
-   <dt>Time</dt>
-  <dd id="commit-time"></dd>
+  <!-- == SCROLLY CONTAINER == -->
+  <div id="scrolly-1">
 
-  <dt>Author</dt>
-  <dd id="commit-author"></dd>
+    <div id="scatter-story">
+      <p></p>
+    </div>
 
-  <dt>Lines edited</dt>
-  <dd id="commit-lines"></dd>
-</dl>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart"></div>
 
+      <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd><a href="" id="commit-link" target="_blank"></a></dd>
 
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+
+        <dt>Lines edited</dt>
+        <dd id="commit-lines"></dd>
+      </dl>
+
+      <p id="selection-count">No commits selected</p>
+
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
+
+  </div>
+
+  <!-- moved to bottom per instructions -->
+  <dl id="files"></dl>
 
 </body>
 </html>
