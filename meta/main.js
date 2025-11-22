@@ -388,35 +388,30 @@ return x >= x0 && x <= x1 && y >= y0 && y <= y1;
 
 
 function renderLanguageBreakdown(selection) {
+  const container = document.getElementById('language-breakdown');
+
+  // 🔸 If there is NO brush selection, clear the stats and stop.
   if (!selection) {
     container.innerHTML = '';
     return;
   }
-  const selectedCommits = selection
-    ? commits.filter((d) => isCommitSelected(selection, d))
-    : [];
 
-if (!selectedCommits.length) {
+  const selectedCommits = commits.filter((d) =>
+    isCommitSelected(selection, d),
+  );
+
+  // 🔸 If the brush is tiny / catches nothing, also clear stats.
+  if (!selectedCommits.length) {
     container.innerHTML = '';
     return;
   }
 
-  const container = document.getElementById('language-breakdown');
-
-  // If some commits are selected, use them; otherwise show all commits
-  const requiredCommits = selectedCommits.length ? selectedCommits : commits;
-
-  if (!requiredCommits.length) {
-    container.innerHTML = '';
-    return;
-  }
-
-  const lines = requiredCommits.flatMap((d) => d.lines);
+  const lines = selectedCommits.flatMap((d) => d.lines);
 
   const breakdown = d3.rollup(
     lines,
-    v => v.length,
-    d => d.type,
+    (v) => v.length,
+    (d) => d.type,
   );
 
   container.innerHTML = '';
@@ -431,6 +426,7 @@ if (!selectedCommits.length) {
     `;
   }
 }
+
 
 
 svg.call(d3.brush().on('start brush end', brushed));
